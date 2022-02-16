@@ -44,6 +44,12 @@ body{
         padding-left: 15px; 
     }
 
+    .loading{
+        display: none;
+        width: 30px;
+        height: 30px;
+    }
+
     .errMsg{
         display: none;
         color: red;

@@ -2,17 +2,20 @@ let locationInput = "los angeles";
 let data = [];
 let unit = "°F";
 const errMsg = document.querySelector('.errMsg');
+const loading = document.querySelector('.loading');
 getData(locationInput);
 
 async function getData(location){
     try{
         errMsg.style.display = 'none';
+        loading.style.display = "block";
         let url = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&APPID=08ebf9b0e8398ffe661ac4bcae054cda";
         const response = await fetch(url, {mode: 'cors'});
         const allData = await response.json();
         const weatherData = await sortData(allData);
         document.querySelector('.icon').src = 'http://openweathermap.org/img/wn/' + data[5] + '@2x.png';
         const render = await renderDisplay(data);
+        loading.style.display = "none";
     } catch (error) {
         errMsg.style.display = 'block';
         errMsg.textContent = "Please input proper city name.";
