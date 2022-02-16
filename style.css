@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+body{
+    background-image: url('./image/5330558.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topBar{
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    #searchBar{
+        margin-left: 30px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    label>img{
+        width:30px;
+    }
+
+    input{
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 20px;
+        padding-left: 15px; 
+    }
+
+    .errMsg{
+        display: none;
+        color: red;
+    }
+
+    .enter{
+        display: none;
+    }
+
+    .topBar>div{
+        margin-right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+
+.mainPanel{
+    width: 800px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 200px 100px 100px 30px;
+    grid-template-rows: 30px 40px 30px 30px 30px 30px 30px;
+    justify-content: center;
+    align-content: center;
+}
+
+    .description{
+        grid-column: 1/4;
+        grid-row: 1/2;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .location{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .icon{
+        grid-column: 3/4;
+        grid-row: 1/3;
+        background-color: lightgray;
+        border-radius: 50%;
+    }
+
+    .temp{
+        grid-column: 1/2;
+        grid-row: 3/8;
+        font-size: 10rem;
+        font-weight: 400;
+    }
+
+    .unit{
+        grid-column: 2/3;
+        grid-row: 6/8;
+        font-size: 2rem;
+        align-self: flex-end;
+        font-weight: 700;
+    }
+
+    .feelsLike{
+        grid-column:3/5;
+        grid-row: 5/6;
+        font-size: 1.2rem;
+        font-weight: 400;
+        align-self: flex-end;
+    }
+
+    .tempMax{
+        grid-column:3/5;
+        grid-row: 6/7;
+        font-size: 1.2rem;
+        font-weight: 400;
+        align-self: flex-end;
+    }
+
+    .tempMin{
+        grid-column:3/5;
+        grid-row: 7/8;
+        font-size: 1.2rem;
+        font-weight: 400;
+        align-self: flex-end;
+    }
+
+.secPanel{
+    width: 800px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 50px 300px 80px;
+    grid-template-rows: 50px 50px 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.2rem;
+}
+
+    .humidityIcon{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .humidity{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin-left: 15px;
+        justify-self: flex-start;
+    }
+
+    .pressureIcon{
+        width: 35px;
+        height: 35px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .pressure{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-left: 15px;
+        justify-self: flex-start;
+    }
+
+    .windSpeedIcon{
+        width: 40px;
+        height: 40px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .windSpeed{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin-left: 15px;
+        justify-self: flex-start;
+    }
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

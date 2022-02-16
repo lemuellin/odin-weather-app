@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "script.js" defer></script>
+</head>
+<body>
+    <div class = "topBar">
+        <form id = "searchBar">
+            <label for = "searchLocation">
+                <img src = "image/magnify.png">
+            </label>
+            <input type = "text" name = "searchLocation" id = "searchLocation">
+            <span class = "errMsg"></span>
+            <button type = "submit" class = "enter">Enter</button>
+        </form>
+        <!-- Rectangular switch -->
+        <div>
+            <div>°F</div>
+            <label class="switch">
+                <input type="checkbox" class = "unitToggle">
+                <span class="slider round"></span>
+            </label>
+            <div>°C</div>
+        </div>
+    </div>
+    <div class = "mainPanel">
+        <div class = "description"></div>
+        <div class = "location"></div>
+        <img class = "icon">
+        <div class = "temp"></div>
+        <div class = "unit"></div>
+        <div class = "feelsLike"></div>
+        <div class = "tempMax"></div>
+        <div class = "tempMin"></div>
+    </div>
+    <div class = "secPanel">
+        <img class = "humidityIcon" src = "image/water-outline.png">
+        <div class = "humidity"></div>
+        <img class = "pressureIcon" src = "image/send.png">
+        <div class = "pressure"></div>
+        <img class = "windSpeedIcon" src = "image/weather-windy.png">
+        <div class = "windSpeed"></div>
+    </div>
+    
+
+</body>
+</html>
