@@ -9,7 +9,7 @@ async function getData(location){
     try{
         errMsg.style.display = 'none';
         loading.style.display = "block";
-        let url = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&APPID=08ebf9b0e8398ffe661ac4bcae054cda";
+        let url = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&APPID=08ebf9b0e8398ffe661ac4bcae054cda";
         const response = await fetch(url, {mode: 'cors'});
         const allData = await response.json();
         const weatherData = await sortData(allData);
