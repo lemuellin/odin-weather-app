@@ -13,7 +13,7 @@ async function getData(location){
         const response = await fetch(url, {mode: 'cors'});
         const allData = await response.json();
         const weatherData = await sortData(allData);
-        document.querySelector('.icon').src = 'http://openweathermap.org/img/wn/' + data[5] + '@2x.png';
+        document.querySelector('.icon').src = 'https://openweathermap.org/img/wn/' + data[5] + '@2x.png';
         const render = await renderDisplay(data);
         loading.style.display = "none";
     } catch (error) {
