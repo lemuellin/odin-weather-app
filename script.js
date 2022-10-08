@@ -72,6 +72,16 @@ enter.addEventListener('click', (e)=>{
     getData(locationInput);
 });
 
+const input = document.getElementById('searchLocation');
+input.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log(e.key);
+    if(e.key == 'enter'){
+        locationInput = document.getElementById('searchLocation').value;
+        getData(locationInput);
+    }
+});
+
 const unitToggle = document.querySelector('.unitToggle');
 unitToggle.addEventListener('click', ()=>{
     unit = unit == "°F" ? "°C" : "°F";

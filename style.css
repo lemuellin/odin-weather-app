@@ -146,6 +146,7 @@ body{
         .mainPanel{
             grid-template-columns: 150px 75px 75px 23px;
             height: 200px;
+            width:100vw;
         }
         .icon{
             width: 5rem;
