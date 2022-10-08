@@ -7,6 +7,9 @@
 }
 
 body{
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
     background-image: url('./image/5330558.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,11 +142,30 @@ body{
         align-self: flex-end;
     }
 
+    @media(max-width:600px){
+        .mainPanel{
+            grid-template-columns: 150px 75px 75px 23px;
+            height: 200px;
+        }
+        .icon{
+            width: 5rem;
+            height: 5rem;
+        }
+        .location{
+            font-size: 2rem;
+        }
+        .temp{
+            font-size: 9rem;
+        }
+        .unit{
+            font-size: 1.8rem;
+        }
+    }
+
 .secPanel{
-    width: 800px;
     height: 200px;
     display: grid;
-    grid-template-columns: 50px 300px 80px;
+    grid-template-columns: 50px 300px;
     grid-template-rows: 50px 50px 50px;
     justify-content: center;
     align-content: center;
