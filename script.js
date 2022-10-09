@@ -67,21 +67,11 @@ function renderDisplay(data){
 
 const enter = document.querySelector('.enter');
 enter.addEventListener('click', (e)=>{
+    console.log(e.target);
     e.preventDefault();
     locationInput = document.getElementById('searchLocation').value;
     getData(locationInput);
-});
-
-const input = document.getElementById('searchLocation');
-input.addEventListener('submit', (e)=>{
-    
-    if(e.key == 'enter'){
-        locationInput = document.getElementById('searchLocation').value;
-        getData(locationInput);
-        e.preventDefault();
-        return false;
-    }
-    
+    return false;
 });
 
 const unitToggle = document.querySelector('.unitToggle');
