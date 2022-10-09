@@ -74,13 +74,14 @@ enter.addEventListener('click', (e)=>{
 
 const input = document.getElementById('searchLocation');
 input.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    console.log(e.key);
+    
     if(e.key == 'enter'){
         locationInput = document.getElementById('searchLocation').value;
         getData(locationInput);
+        e.preventDefault();
         return false;
     }
+    
 });
 
 const unitToggle = document.querySelector('.unitToggle');
