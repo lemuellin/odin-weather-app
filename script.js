@@ -67,12 +67,22 @@ function renderDisplay(data){
 
 const enter = document.querySelector('.enter');
 enter.addEventListener('click', (e)=>{
-    console.log(e.target);
+    console.log('clicked');
     e.preventDefault();
     locationInput = document.getElementById('searchLocation').value;
     getData(locationInput);
     return false;
 });
+
+const input = document.getElementById('searchBar');
+input.addEventListener('submit', (e) => {
+    console.log('submitted');
+    e.preventDefault();
+    locationInput = document.getElementById('searchLocation').value;
+    getData(locationInput);
+    return false;
+});
+
 
 const unitToggle = document.querySelector('.unitToggle');
 unitToggle.addEventListener('click', ()=>{
