@@ -80,6 +80,7 @@ input.addEventListener('submit', (e)=>{
         locationInput = document.getElementById('searchLocation').value;
         getData(locationInput);
     }
+    return false;
 });
 
 const unitToggle = document.querySelector('.unitToggle');
