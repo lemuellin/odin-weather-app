@@ -79,8 +79,8 @@ input.addEventListener('submit', (e)=>{
     if(e.key == 'enter'){
         locationInput = document.getElementById('searchLocation').value;
         getData(locationInput);
+        return false;
     }
-    return false;
 });
 
 const unitToggle = document.querySelector('.unitToggle');
