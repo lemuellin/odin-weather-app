@@ -2,7 +2,7 @@
 A weather app utilizing Open Weather API with Async JS.  
 [Live Demo](https://lemuellin.github.io/odin-weather-app/) :point_left:
 
-<img src="./weatherNow.png">
+<img src="./weatherNowCompressed.png">
 
 ## Features
 -   Displays current weather conditions
